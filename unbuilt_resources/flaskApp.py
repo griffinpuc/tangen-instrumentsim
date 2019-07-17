@@ -1,4 +1,14 @@
+"""Mock Instrument Flask Instance
+
+Usage:
+  flaskApp.py -p <port>
+
+Options:
+  -p --port     Specify a custom port (necessary for multiple instruments)
+
+"""
 from flask import Flask, send_file, jsonify, url_for
+from docopt import docopt
 import random
 import socket
 import json
