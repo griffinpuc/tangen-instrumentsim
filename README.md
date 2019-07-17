@@ -41,15 +41,15 @@ only dependency this will **NOT** satisfy is Docker Toolbox.
 
 ### PIP Requirements
 
-### Docopt
+#### Docopt
 ~~~~
 pip install docopt
 ~~~~
-### Docker
+#### Docker
 ~~~~
 pip install docker
 ~~~~
-### Flask
+#### Flask
 ~~~~
 pip install Flask
 ~~~~
