@@ -20,7 +20,7 @@ python mtisim.py --update
 
 ## Dependencies
 
-#### Auto Updates & Dependency Satisfaction
+### Auto Updates & Dependency Satisfaction
 ~~~~
 python mtisim.py --update
 ~~~~
@@ -29,17 +29,23 @@ only dependency this will **NOT** satisfy is Docker Toolbox.
 
 &nbsp;
 
+### Docker Requirements
+
 #### Docker Toolbox (Windows Home Edition Systems)  
 [Download Docker Toolbox Here](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
 #### Docker Desktop (Windows Pro & Enterprise Systems)
 [Download Docker Desktop Here](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-#### Docopt
+&nbsp;
+
+### PIP Requirements
+
+### Docopt
 ~~~~
 pip install docopt
 ~~~~
-#### Docker
+### Docker
 ~~~~
 pip install docker
 ~~~~
@@ -69,7 +75,7 @@ Options:
 mtisim.py launch <name> to <port>
 ~~~~
 
-Replace <name> with whatever you would like to call this instance, and <port> with the dedicated
+Replace **\<name>** with whatever you would like to call this instance, and **\<port>** with the dedicated
 port for this instance. If you are launching multiple instances, multiple ports must be used as they
 are all running from one piece of hardware.
 
@@ -81,7 +87,7 @@ are all running from one piece of hardware.
 mtisim.py crash <name>
 ~~~~
 
-Have no need for an instance anymore? Replace <name> with the instance name to make it disappear forever.
+Have no need for an instance anymore? Replace **\<name>** with the instance name to make it disappear forever.
 
 &nbsp;
 
@@ -91,7 +97,7 @@ Have no need for an instance anymore? Replace <name> with the instance name to m
 mtisim.py push <filepath> to <name>
 ~~~~
 
-Replace <filepath> with the path to your Results.JSON or RawData.JSON and the file will be added to
+Replace **\<filepath>** with the path to your Results.JSON or RawData.JSON and the file will be added to
 the instrument instance's **/tdx/getResults** queue, queing it to be sent out.
 
 &nbsp;
@@ -103,5 +109,5 @@ mtisim.py add <delay> delay to <name>
 ~~~~
 
 Adding delayed rolling results is useful if you'd like to automate the process of having new results
-pop up regularly. Simply replace <delay> with seconds (Eg. '10' for a ten second delay), and every
+pop up regularly. Simply replace **\<delay>** with seconds (Eg. '10' for a ten second delay), and every
 **x** seconds a new set of results will be added to the queue. To remove this delay, crash the instance.
