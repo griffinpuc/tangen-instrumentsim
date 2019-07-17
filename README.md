@@ -6,30 +6,44 @@
 Container-based software that easily allows mock Tangen instrument instances to be simulated
 on your pc. Originally built for testing the Tangen Data Portal, but can be used for any use where
 an instrument is required as it simulates API requests exactly like the physical hardware.
-<br/><br/>
+
+&nbsp;
+
 ## Installation
 ~~~~
 git clone https://github.com/griffinpuc/TGNBInstrumentSim.git
-~~~~
+~~~~ 
+
+&nbsp;
+
 ## Dependencies
-##### Docker Toolbox (Windows Home Edition Systems)  
+
+#### Auto Updates & Dependency Satisfaction
+~~~~
+python mtisim.py --update
+~~~~
+Running this will automatically fetch updated code and satisfy dependencies if PIP is installed. The
+only dependency this will **NOT** satisfy is Docker Toolbox.
+
+&nbsp;
+
+#### Docker Toolbox (Windows Home Edition Systems)  
 [Download Docker Toolbox Here](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
-##### Docker Desktop (Windows Pro & Enterprise Systems)
+#### Docker Desktop (Windows Pro & Enterprise Systems)
 [Download Docker Desktop Here](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-##### Docopt
+#### Docopt
 ~~~~
 pip install docopt
 ~~~~
-##### Docker
+#### Docker
 ~~~~
 pip install docker
 ~~~~
 
 <br/><br/>
 ## Usage Guide
-***
 ~~~~
 Usage:
   mtisim.py launch <name> on <port>
@@ -43,6 +57,29 @@ Options:
   -h --help     Show this screen.
   -n --nuke     Crash all mock instrument containers.
 ~~~~
+&nbsp;
+
+## Launching an Instrument Instance
+
+~~~~
+mtisim.py launch <name> to <port>
+~~~~
+
+Replace <name> with whatever you would like to call this instance, and <port> with the dedicated
+port for this instance. If you are launching multiple instances, multiple ports must be used as they
+are all running from one piece of hardware.
+
+&nbsp;
+
+## Crashing an Instrument Instance
+
+~~~~
+mtisim.py crash <name>
+~~~~
+
+Have no need for an instance anymore? Replace <name> with the instance name to make it disappear forever.
+
+&nbsp;
 
 ## Pushing a Custom Results, Raw, or Log File
 
@@ -52,3 +89,15 @@ mtisim.py push <filepath> to <name>
 
 Replace <filepath> with the path to your Results.JSON or RawData.JSON and the file will be added to
 the instrument instance's **/tdx/getResults** call, queing it to be sent out.
+
+&nbsp;
+
+## Adding Delayed Rolling Results
+
+~~~~
+mtisim.py add <delay> delay to <name>
+~~~~
+
+Adding delayed rolling results is useful if you'd like to automate the process of having new results
+pop up regularly. Simply replace <delay> with seconds (Eg. '10' for a ten second delay), and every
+x seconds a new set of results will be added to the qeue. To remove this delay, crash the instance.
