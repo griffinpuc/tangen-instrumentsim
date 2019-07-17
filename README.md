@@ -111,3 +111,8 @@ mtisim.py add <delay> delay to <name>
 Adding delayed rolling results is useful if you'd like to automate the process of having new results
 pop up regularly. Simply replace **\<delay>** with seconds (Eg. '10' for a ten second delay), and every
 **x** seconds a new set of results will be added to the queue. To remove this delay, crash the instance.
+
+&nbsp;
+&nbsp;
+
+Copyright &copy; Tangen Biosciences 2019
