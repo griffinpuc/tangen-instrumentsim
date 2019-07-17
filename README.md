@@ -54,10 +54,12 @@ Usage:
   mtisim.py push <filepath> to <name>
   mtisim.py add <delay> delay to <name>
   mtisim.py remove delay from <name>
+  mtisim.py --update
 
 Options:
   -h --help     Show this screen.
   -n --nuke     Crash all mock instrument containers.
+  --update      Automatically update code and satisfy pip dependencies.
 ~~~~
 &nbsp;
 
@@ -90,7 +92,7 @@ mtisim.py push <filepath> to <name>
 ~~~~
 
 Replace <filepath> with the path to your Results.JSON or RawData.JSON and the file will be added to
-the instrument instance's **/tdx/getResults** call, queing it to be sent out.
+the instrument instance's **/tdx/getResults** queue, queing it to be sent out.
 
 &nbsp;
 
@@ -102,4 +104,4 @@ mtisim.py add <delay> delay to <name>
 
 Adding delayed rolling results is useful if you'd like to automate the process of having new results
 pop up regularly. Simply replace <delay> with seconds (Eg. '10' for a ten second delay), and every
-x seconds a new set of results will be added to the qeue. To remove this delay, crash the instance.
+**x** seconds a new set of results will be added to the queue. To remove this delay, crash the instance.
