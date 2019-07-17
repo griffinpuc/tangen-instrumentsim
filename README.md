@@ -49,6 +49,10 @@ pip install docopt
 ~~~~
 pip install docker
 ~~~~
+###Flask
+~~~~
+pip install Flask
+~~~~
 
 <br/><br/>
 ## Usage Guide
