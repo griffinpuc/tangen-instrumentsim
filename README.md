@@ -6,12 +6,11 @@
 Container-based software that easily allows mock Tangen instrument instances to be simulated
 on your pc. Originally built for testing the Tangen Data Portal, but can be used for any use where
 an instrument is required as it simulates API requests exactly like the physical hardware.
-
+<br/><br/>
 ## Installation
 ~~~~
 git clone https://github.com/griffinpuc/TGNBInstrumentSim.git
 ~~~~
-
 ## Dependencies
 ##### Docker Toolbox (Windows Home Edition Systems)  
 [Download Docker Toolbox Here](https://docs.docker.com/toolbox/toolbox_install_windows/)
@@ -28,10 +27,9 @@ pip install docopt
 pip install docker
 ~~~~
 
-***
-
+<br/><br/>
 ## Usage Guide
-
+***
 ~~~~
 Usage:
   mtisim.py launch <name> on <port>
