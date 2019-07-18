@@ -10,14 +10,14 @@ Usage:
 
 Options:
   -h --help     Show this screen.
-  -b --build    Build latest mock instrument container.
   -n --nuke     Crash all mock instrument containers.
-
+  
 """
 #Dependencies
 from docopt import docopt
 import docker
 import sys
+import pip
 import os
 
 client = docker.from_env()
@@ -80,3 +80,6 @@ if((arguments['crash'] == True)):
     instanceName = arguments['<name>']
     crashInstrument(instanceName)
 
+if((arguments['update'] == True)):
+    #update script here... when am i gonna get to this?
+    print("No")

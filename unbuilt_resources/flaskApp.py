@@ -7,6 +7,7 @@ Options:
   -p --port     Specify a custom port (necessary for multiple instruments)
 
 """
+#Dependencies
 from flask import Flask, send_file, jsonify, url_for
 from docopt import docopt
 import random
@@ -14,6 +15,7 @@ import socket
 import json
 import io
 
+#Flask server
 def startServerThread(instrumentAddress, instrumentPort):
 
     app = Flask(__name__)
@@ -44,5 +46,17 @@ def startServerThread(instrumentAddress, instrumentPort):
 
     app.run(host=instrumentAddress, port=instrumentPort)
 
-instrumentAddress = socket.gethostbyname(socket.gethostname())
-startServerThread(instrumentAddress, 5000)
+
+#Main argument handler
+if __name__ == '__main__':
+    arguments = docopt(__doc__, version='MTISIM 0.0.2')
+
+
+if((arguments['<port>'] != None)):
+    instrumentAddress = socket.gethostbyname(socket.gethostname())
+    instrumentPort = arguments['<port>']
+
+    print(("Instrument address: {0}:{1}").format(instrumentAddress, instrumentPort))
+    startServerThread(instrumentAddress, instrumentPort)
+else:
+    print("No port specifed, exiting launch.")
