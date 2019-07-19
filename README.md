@@ -1,4 +1,4 @@
-# TGNBInstrumentSim
+# Tangen Instrument Sim
 
 *Latest Update: 17 July 2019*
 
