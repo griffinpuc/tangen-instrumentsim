@@ -12,7 +12,7 @@ an instrument is required as it simulates API requests exactly like the physical
 ~~~~
 git clone https://github.com/griffinpuc/TGNBInstrumentSim.git
 cd TGNBInstrumenSim
-python mtisim.py --update
+pip -r install requirements.txt
 ~~~~ 
 
 &nbsp;
