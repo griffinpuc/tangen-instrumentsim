@@ -2,8 +2,6 @@
 
 *Latest Update: 17 July 2019*
 
-**Currently in progress, expect working ~ 14 days**
-
 Container-based software that easily allows mock Tangen instrument instances to be simulated
 on your pc. Originally built for testing the Tangen Data Portal, but can be used for any use where
 an instrument is required as it simulates API requests exactly like the physical hardware.
