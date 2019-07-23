@@ -21,15 +21,6 @@ python mtisim.py --update
 
 ## Dependencies
 
-### Auto Updates & Dependency Satisfaction
-~~~~
-python mtisim.py --update
-~~~~
-Running this will automatically fetch updated code and satisfy dependencies if PIP is installed. The
-only dependency this will **NOT** satisfy is Docker Toolbox.
-
-&nbsp;
-
 ### Docker Requirements
 
 #### Docker Toolbox (Windows Home Edition Systems)  
