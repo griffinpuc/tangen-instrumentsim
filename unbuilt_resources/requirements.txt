@@ -1,5 +1,5 @@
 #requirements.txt
 
-Flask==1.0.3
+Flask==2.3.2
 docopt==0.6.2
 docker==4.0.2
